@@ -1,0 +1,93 @@
+/* Layout System */
+
+/* Column Layout */
+.main-content-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Common Section Styles */
+.profile-section,
+.about-me,
+.contact-section,
+.projects {
+    width: 100%;
+    margin: 0;
+    grid-column: 1;
+    margin-bottom: 1.5rem;
+}
+
+/* Specific Section Adjustments */
+.profile-section,
+.contact-section {
+    height: fit-content;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* About Me Section */
+.about-me {
+    position: relative;
+    min-height: 200px;
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me .content-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    flex-grow: 1;
+}
+
+/* Projects Section */
+.projects {
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-right: 2rem;
+    height: auto;
+}
+
+/* Size Calculator for Dynamic Sizing */
+.size-calculator {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.about-me .size-calculator {
+    white-space: pre-wrap;
+    word-break: break-word;
+    width: 100%;
+}

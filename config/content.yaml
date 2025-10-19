@@ -1,0 +1,100 @@
+profile:
+  name: "Mo Malekpour"
+  title: "AI Software Engineer and Researcher, Databases Internals Enjoyer"
+
+aboutMe:
+  texts:
+    - |
+      I'm Mo, a MSc researcher at Data & AI Systems Lab (DAIS) in Polytechnique Montreal and Mila - Quebec AI Institute, focusing on the application of Artificial Intelligence in Data Systems. My research aims to enhance data management practices through innovative AI solutions, particularly in area of Text-to-SQL.
+
+      ## Research Interests:
+      
+          * AI-powered Software Engineering
+          * Data Management
+          * Information Retrieval
+          * Text-to-SQL
+          * Database Systems
+
+      Currently, I'm Graduate Research Assistant at Polytechnique Montreal and Mila. Previously, I've built data pipelines and dashboards at Divar (an e-commerce platform with 30M+ monthly active users), did two internships in software engineering at Segmentino and IPM, and completed my Bachelor's degree in Computer Science with minor in Economics at AmirKabir University of Technology.
+    - |
+      سلام! i'm Mo, currently doing my MSc at Polytechnique Montreal and Mila!
+
+      ## the main quest:
+
+        * making AI models actually useful for software/data engineering
+        * hanging out with ma Claudes
+        * learning systems programming and DBs internals for fun/pain
+
+      ## stack:
+
+        * backend development enthusiast \( ﾟヮﾟ)/
+        * data systems enjoyer ( ´∀`)v
+        * c++ sufferer (¬_¬")
+        * rust evangelist? (¯\_(ツ)_/¯)
+
+      ## speedrun:
+
+      started as a computer science student at AmirKabir University, software engineer intern at IPM and then Segmentino, built data pipelines and dashboards at Divar, did some text-to-sql at PolyMTL, and now wrestling with my Master's thesis.
+
+      if i'm not dropping PRs or putting a curse on reviewer 2, i'm yelling at Anthropic for their rate limits.
+    - |
+      +++ Designation: Magos Errant of Polytechnica Montrealis
+      +++ Rank: Initiate of Recursive Invocation, Disciple of the Machine God, Magos Dominus Cawl's Second-Favorite Debugger
+
+      > By the Omnissiah's will, I labor in:
+
+        + Cog-Integrated Software Rites (AI-powered SE)
+        + Sacred Data Vaults and Query Engines (Database Systems)
+        + Rituals of Natural Language Translation (Text-to-SQL)
+        + High Lexicons of the Lingua Ex Machina (LLMs in SE)
+
+      > Past services to the Omnissiah:
+
+        + Constructed machine spirit infrastructure reliquaries at National Bank.
+        + Bound daemonhosts into serviceable chat rituals at Airudi.
+        + Architected high-density cogitator arrays at Huawei, with minimal machine-spirit screaming.
+
+      > My current pilgrimage leads me through the data-wastes of TrampolineAI, where I architect recursive evaluation circuits for RAG constructs.
+
+contact:
+  social:
+    - name: "GitHub"
+      url: "https://github.com/momalekpour"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/momalekpour/"
+    - name: "X"
+      url: "https://x.com/momalekpour"
+    # - name: "Google Scholar"
+    #   url: "https://scholar.google.com/citations?hl=en&user=I93rRrYAAAAJ&view_op=list_works&sortby=pubdate"
+    - name: "YouTube"
+      url: "https://www.youtube.com/@MoMalekpour"
+    - name: "Email"
+      url: "mailto:mohammadhossein.malekpour@gmail.com"
+
+
+publications:
+  - title: "SQLMorph: Query Mutation for Robust Text-to-SQL Evaluation --- ICDE 2026 (under review)"
+    links:
+      - name: "Paper"
+        url: "https://2026.sigmod.org/"
+      - name: "Repository"
+        url: "https://github.com/dais-polymtl/text-to-sql-coverage"
+    description: "SQLMorph is a framework for robust Text-to-SQL evaluation via query mutation. It introduces two automatic dataset expansion techniques: Join Query Expansion (JQE), which increases structural complexity through valid join additions, and Textual Query Augmentation (TQA), which perturbs natural language to test linguistic robustness. SQLMorph also proposes new execution-level metrics—Execution Precision, Recall, and F1—to capture partial correctness beyond binary accuracy. Together, these methods expose coverage gaps, robustness issues, and performance trade-offs in state-of-the-art models, aligning evaluation with real-world deployment needs."
+
+  - title: "Towards Optimizing SQL Generation via LLM Routing --- TRL @ NeurIPS 2024"
+    links:
+      - name: "Paper"
+        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I93rRrYAAAAJ&citation_for_view=I93rRrYAAAAJ:W7OEmFMy1HYC"
+    description: "Text-to-SQL lets users query databases using natural language, but powerful LLMs often waste time and money on simple queries. We propose the first LLM routing approach for Text-to-SQL, dynamically selecting the most cost-effective model that maintains accuracy. Our score- and classification-based routers match top-tier LLM performance while cutting costs, and are easy to train and deploy. Experiments on the BIRD dataset reveal a practical, explainable accuracy–cost trade-off."
+
+  - title: "ML Predictions for Optimal Cement Content --- Journal of Building Engineering 2024"
+    links:
+      - name: "Paper"
+        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I93rRrYAAAAJ&citation_for_view=I93rRrYAAAAJ:u5HHmVD_uO8C"
+    description: "Concrete design often overuses cement to guarantee 28-day strength, even when many structural elements, like foundations and pavements, reach full load much later. This study uses machine learning to optimize cement content for a 90-day strength target, reducing waste and emissions. Using ANN, deep learning, and regression models trained on 28- and 90-day compressive strength data, we predict optimal cement content with up to 94% accuracy. Elastic Net achieves the best results, showing potential for ~10% reductions in both cement use and carbon footprint."
+
+  - title: "DailyDiet"
+    links:
+      - name: "Repository"
+        url: "https://github.com/DailyDiet/DailyDiet-API"
+    description: "DailyDiet is a full-stack nutrition management platform that helps users plan meals, calculate daily calorie needs, and explore recipes tailored to their goals. I was responsible for leading all backend development — building a scalable RESTful API with Flask and PostgreSQL to handle user authentication, dynamic diet generation, and recipe indexing. The backend features a dynamic-programming–based diet recommendation engine, JWT-secured user accounts, and Elasticsearch integration for semantic and ingredient-based recipe search. I also managed deployment and infrastructure setup on Heroku, and designed the data models for user tracking and admin moderation. The API powers the Vue.js + Nuxt web frontend and the companion iOS app."

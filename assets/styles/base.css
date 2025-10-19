@@ -1,0 +1,35 @@
+/* Base Styles & Reset */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'DOS', 'Perfect DOS VGA 437', monospace;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Container */
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid #2a692a;
+    border-radius: 10px;
+}
+
+/* Selection Styling */
+::selection {
+    background-color: #00ff00;
+    color: #000000;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background-color: #00ff00;
+    color: #000000;
+    text-shadow: none;
+}
