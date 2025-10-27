@@ -73,7 +73,7 @@ contact:
 
 
 publications:
-  - title: "SQLMorph: Query Mutation for Robust Text-to-SQL Evaluation --- ICDE 2026 (under review)"
+  - title: "SQLMorph: Query Mutation for Robust Text-to-SQL Evaluation --- (Working manuscript)"
     links:
       - name: "Paper"
         url: "https://2026.sigmod.org/"
