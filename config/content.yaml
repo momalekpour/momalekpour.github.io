@@ -73,7 +73,7 @@ contact:
 
 
 publications:
-  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation --- (working manuscript))"
+  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation --- (working manuscript)"
     links:
       - name: "Paper"
         url: "https://2026.sigmod.org/"
