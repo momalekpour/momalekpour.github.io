@@ -73,12 +73,12 @@ contact:
 
 
 publications:
-  - title: "SQLMorph: Query Mutation for Robust Text-to-SQL Evaluation --- (Working manuscript)"
+  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation --- Under Review at ICDE 2026"
     links:
       - name: "Paper"
         url: "https://2026.sigmod.org/"
-      # - name: "Repository"
-      #   url: "https://github.com/dais-polymtl/sql-morph"
+      - name: "Repository"
+        url: "https://github.com/dais-polymtl/sql-morph"
     description: "SQLMorph is a framework for robust Text-to-SQL evaluation via query mutation. It introduces two automatic dataset expansion techniques: Join Query Expansion (JQE), which increases structural complexity through valid join additions, and Textual Query Augmentation (TQA), which perturbs natural language to test linguistic robustness. SQLMorph also proposes new execution-level metrics—Execution Precision, Recall, and F1—to capture partial correctness beyond binary accuracy. Together, these methods expose coverage gaps, robustness issues, and performance trade-offs in state-of-the-art models, aligning evaluation with real-world deployment needs."
 
   - title: "Towards Optimizing SQL Generation via LLM Routing --- TRL @ NeurIPS 2024"
