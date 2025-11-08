@@ -1,6 +1,13 @@
 /* Interactive Components */
 
 /* Links & Buttons */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
 .project-links a,
 .social-links a {
     color: #00ff00;
@@ -8,8 +15,10 @@
     padding: 0.3rem 0.8rem;
     border: 1px solid #2a692a;
     border-radius: 3px;
-    margin: 2px;
+    margin: 0;
     transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .project-links a:hover,
