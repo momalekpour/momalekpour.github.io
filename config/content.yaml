@@ -64,8 +64,8 @@ contact:
       url: "https://www.linkedin.com/in/momalekpour/"
     - name: "X"
       url: "https://x.com/momalekpour"
-    # - name: "Google Scholar"
-    #   url: "https://scholar.google.com/citations?hl=en&user=I93rRrYAAAAJ&view_op=list_works&sortby=pubdate"
+    - name: "Scholar"
+      url: "https://scholar.google.com/citations?hl=en&user=I93rRrYAAAAJ&view_op=list_works&sortby=pubdate"
     - name: "YouTube"
       url: "https://www.youtube.com/@MoMalekpour"
     - name: "Email"
@@ -73,21 +73,23 @@ contact:
 
 
 publications:
-  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation --- (working manuscript)"
+  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation --- ICDE 2026 (under review)"
     links:
       - name: "Paper"
         url: "https://2026.sigmod.org/"
       - name: "Repository"
         url: "https://github.com/dais-polymtl/sqlmorph"
-    description: "SQLMorph is a framework for robust Text-to-SQL evaluation via query mutation. It introduces two automatic dataset expansion techniques: Join Query Expansion (JQE), which increases structural complexity through valid join additions, and Textual Query Augmentation (TQA), which perturbs natural language to test linguistic robustness. SQLMorph also proposes new execution-level metrics—Execution Precision, Recall, and F1—to capture partial correctness beyond binary accuracy. Together, these methods expose coverage gaps, robustness issues, and performance trade-offs in state-of-the-art models, aligning evaluation with real-world deployment needs."
+    description: "SQLMorph is a mutation-based framework for robust, reproducible Text-to-SQL evaluation. It tackles limits of public benchmarks and the cost/instability of private sets by automatically generating/expanding evaluation data via (1) Join Query Expansion (JQE), which systematically adds semantically valid joins to raise structural complexity, and (2) Textual Query Augmentation (TQA), which applies controlled natural-language perturbations to probe linguistic robustness. These create targeted “choke points”: on state-of-the-art models, JQE increases coverage and exposes accuracy decay as join count grows, while TQA surfaces brittleness. Beyond datasets, SQLMorph introduces relaxed execution-level metrics—Execution Precision (EXP), Execution Recall (EXR), and their F1—to capture partial correctness."
 
-  - title: "Towards Optimizing SQL Generation via LLM Routing --- TRL @ NeurIPS 2024"
+  - title: "VortoSQL: Towards Optimizing SQL Generation via LLM Routing --- NeurIPS 2024 TRL"
     links:
       - name: "Paper"
         url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I93rRrYAAAAJ&citation_for_view=I93rRrYAAAAJ:W7OEmFMy1HYC"
-    description: "Text-to-SQL lets users query databases using natural language, but powerful LLMs often waste time and money on simple queries. We propose the first LLM routing approach for Text-to-SQL, dynamically selecting the most cost-effective model that maintains accuracy. Our score- and classification-based routers match top-tier LLM performance while cutting costs, and are easy to train and deploy. Experiments on the BIRD dataset reveal a practical, explainable accuracy–cost trade-off."
+      - name: "Repository"
+        url: "https://github.com/momalekpour/VortoSQL"
+    description: "Text-to-SQL enables users to interact with databases through natural language, simplifying access to structured data. Although highly capable large language models (LLMs) achieve strong accuracy for complex queries, they incur unnecessary latency and dollar cost for simpler ones. In this paper, we introduce the first LLM routing approach for Text-to-SQL, which dynamically selects the most cost-effective LLM capable of generating accurate SQL for each query. We present two routing strategies (score- and classification-based) that achieve accuracy comparable to the most capable LLM while reducing costs. We design the routers for ease of training and efficient inference. In our experiments, we highlight a practical and explainable accuracy-cost trade-off on the BIRD dataset."
 
-  - title: "ML Predictions for Optimal Cement Content --- Journal of Building Engineering 2024"
+  - title: "Machine Learning Predictions for ... Sustainable Concrete Constructions --- Journal of Building Engineering 2024"
     links:
       - name: "Paper"
         url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I93rRrYAAAAJ&citation_for_view=I93rRrYAAAAJ:u5HHmVD_uO8C"
