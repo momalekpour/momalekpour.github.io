@@ -73,7 +73,7 @@ contact:
 
 
 publications:
-  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation --- ICDE 2026 (under review)"
+  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation --- ICDE 2026"
     links:
       - name: "Repository"
         url: "https://github.com/dais-polymtl/sqlmorph"
