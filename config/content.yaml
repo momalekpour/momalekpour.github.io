@@ -65,8 +65,8 @@ contact:
       url: "https://scholar.google.com/citations?hl=en&user=I93rRrYAAAAJ&view_op=list_works&sortby=pubdate"
     - name: "X"
       url: "https://x.com/momalekpour"
-    - name: "YouTube"
-      url: "https://www.youtube.com/@MoMalekpour"
+    # - name: "YouTube"
+    #   url: "https://www.youtube.com/@MoMalekpour"
     - name: "Email"
       url: "mailto:momalekpour98@gmail.com"
 
