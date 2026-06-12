@@ -96,7 +96,7 @@ body {
     justify-content: flex-start;
     text-align: center;
     position: relative;
-    padding: 12vh 0 var(--space-2xl);
+    padding: 7vh 0 var(--space-2xl);
     box-sizing: border-box;
 }
 
