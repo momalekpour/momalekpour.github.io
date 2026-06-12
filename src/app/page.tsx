@@ -9,15 +9,12 @@ export default function Home() {
 
   return (
     <>
-      <main className="site-main crt">
+      <main className="site-main">
         <Landing profile={content.profile} texts={content.aboutMe.texts} />
         <TimelineSection heading="Education" id="education" entries={content.education} />
         <TimelineSection heading="Experience" id="experience" entries={content.experience} />
-        <PublicationList
-          heading="Publications & Projects"
-          id="publications"
-          items={[...content.publications, ...content.projects]}
-        />
+        <PublicationList heading="Papers" id="papers" items={content.publications} />
+        <PublicationList heading="Projects" id="projects" items={content.projects} />
       </main>
       <div className="social-dock">
         <SocialLinks links={content.contact.social} />

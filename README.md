@@ -43,9 +43,9 @@ Open **`content/content.yaml`** and edit the text. It has four sections:
   "personas"; clicking the About text cycles through them. Add/remove/edit entries here.
 - `education` / `experience` — the **Education** and **Experience** sections (rendered in
   that order). Each entry has `title`, `org`, `period`, and a list of `bullets`.
-- `publications` and `projects` — rendered together as one **Publications & Projects**
-  section (publications first). Each has a `title`, optional `venue`, a `description`, and
-  optional `links` (name + url).
+- `publications` and `projects` — rendered as two separate sections, **Papers** and
+  **Projects**. Each entry has a `title`, optional `venue`, a `description`, and optional
+  `links` (name + url).
 - `contact.social` — the social links, shown as a fixed icon dock pinned to the bottom of
   the screen (the icon is matched by `name`: GitHub, LinkedIn, Scholar, X, YouTube, Email).
 
@@ -71,7 +71,7 @@ src/
     page.tsx            ← composes the page sections from content.yaml
     globals.css         ← all styling (CRT theme, layout, typography)
   components/
-    SiteNav.tsx         ← sticky top navigation (centered section links)
+    SiteNav.tsx         ← sticky top navigation (centered links + scroll-spy active state)
     Landing.tsx         ← full-height landing: name (glitch) + title + typing About (personas)
     PublicationList.tsx ← reusable list, used for both Papers and Projects
     TimelineSection.tsx ← reusable list, used for both Experience and Education

@@ -14,9 +14,9 @@ const quicksand = Quicksand({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://malekpour.io"),
-  title: "Mo Malekpour | AI Software Engineer & Researcher",
+  title: "Mo Malekpour | ML Software Engineer & Researcher",
   description:
-    "Mo Malekpour - MSc researcher at Polytechnique Montreal & Mila specializing in AI for Data Systems, Text-to-SQL, and Database Systems. Graduate Research Assistant at DAIS Lab working on innovative AI solutions for data management.",
+    "Mo Malekpour — ML Software Engineer & Researcher specializing in AI for Data Systems, Text-to-SQL, and Database internals. MASc Polytechnique Montreal & Mila.",
   keywords: [
     "Mo Malekpour",
     "AI Software Engineer",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Mo Malekpour" }],
   alternates: { canonical: "https://malekpour.io" },
   openGraph: {
-    title: "Mo Malekpour - AI Software Engineer & Researcher",
+    title: "Mo Malekpour - ML Software Engineer & Researcher",
     description:
-      "MSc researcher at Polytechnique Montreal & Mila, specializing in AI for Data Systems, Text-to-SQL, and Database Systems. Enhancing data management through innovative AI solutions.",
+      "ML Software Engineer & Researcher specializing in AI for Data Systems, Text-to-SQL, and Database internals. MASc Polytechnique Montreal & Mila.",
     url: "https://malekpour.io",
     type: "website",
     images: ["https://pallasengine.com/static/images/profile.jpg"],
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@momalekpour",
-    title: "Mo Malekpour - AI Software Engineer & Researcher",
+    title: "Mo Malekpour - ML Software Engineer & Researcher",
     description:
-      "MSc researcher specializing in AI for Data Systems, Text-to-SQL, and Database Systems at Polytechnique Montreal & Mila.",
+      "ML Software Engineer & Researcher specializing in AI for Data Systems, Text-to-SQL, and Database internals.",
     images: ["https://pallasengine.com/static/images/profile.jpg"],
   },
   icons: {
@@ -81,7 +81,6 @@ const personJsonLd = {
     "https://github.com/momalekpour",
     "https://www.linkedin.com/in/momalekpour/",
     "https://x.com/momalekpour",
-    "https://twitter.com/momalekpour",
     "https://momalekpour.medium.com",
   ],
   knowsAbout: [
@@ -135,8 +134,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteNav />
         {children}
         <Footer />
+        <GoogleAnalytics gaId="G-ZBC862D3S5" />
       </body>
-      <GoogleAnalytics gaId="G-ZBC862D3S5" />
     </html>
   );
 }

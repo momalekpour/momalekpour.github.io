@@ -1,14 +1,13 @@
 // Shape of content/content.yaml — the single source of truth for site content.
 
-export interface SocialLink {
+export interface Link {
   name: string;
   url: string;
 }
 
-export interface PublicationLink {
-  name: string;
-  url: string;
-}
+// Named aliases kept for clarity at usage sites.
+export type SocialLink = Link;
+export type PublicationLink = Link;
 
 export interface Publication {
   title: string;

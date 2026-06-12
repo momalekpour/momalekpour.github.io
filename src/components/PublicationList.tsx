@@ -14,7 +14,7 @@ export default function PublicationList({
       <h2 className="section-label">{heading}</h2>
       <div className="project-grid">
         {items.map((pub, i) => (
-          <article className="project-item" key={i}>
+          <article className="project-item" key={pub.title}>
             <h3 className="project-item__title">{pub.title}</h3>
             {pub.venue && <p className="project-item__venue">{pub.venue}</p>}
             <p className="project-description">{pub.description}</p>

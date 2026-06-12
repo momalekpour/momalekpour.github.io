@@ -31,18 +31,20 @@ Content-driven and static-first:
   **build time** (server-side `fs`), typed by [src/lib/types.ts](src/lib/types.ts).
 - **[src/app/page.tsx](src/app/page.tsx)** is a server component: it calls `getContent()`
   and composes the sections (in order) — `<Landing>`, `<TimelineSection>` Education,
-  `<TimelineSection>` Experience, and one `<PublicationList>` "Publications & Projects"
-  (fed `[...publications, ...projects]`), plus `<SocialLinks>` rendered as a fixed bottom
-  dock (`.social-dock`).
+  `<TimelineSection>` Experience, `<PublicationList>` Papers, `<PublicationList>` Projects,
+  plus `<SocialLinks>` rendered as a fixed bottom dock (`.social-dock`).
 - **[src/app/layout.tsx](src/app/layout.tsx)** holds the `<html>` frame: SEO `metadata`,
   two JSON-LD blocks, Quicksand via `next/font`, Google Analytics via
   `@next/third-parties`, the CRT overlay divs, `<SiteNav/>`, and `<Footer/>`.
 - **[src/components/](src/components/)**: `PublicationList` and `TimelineSection` are each
   reused for two sections (Papers/Projects and Experience/Education respectively).
-  Only **[src/components/Landing.tsx](src/components/Landing.tsx)** is a client component
+  **[src/components/Landing.tsx](src/components/Landing.tsx)** is a client component
   (`"use client"`): the full-height landing whose `useEffect` drives the typing animation,
   the click-to-cycle persona switch (click the About block), and a periodic glitch on the
   name — with full cleanup (timers + appended spans) on unmount.
+  **[src/components/SiteNav.tsx](src/components/SiteNav.tsx)** is also a client component:
+  an `IntersectionObserver` scroll-spy that lights up (`.active`) the nav link for the
+  section currently in view.
 - **Styling** is one global file, [src/app/globals.css](src/app/globals.css) (CSS custom
   properties for the green-phosphor palette + spacing scale; body text is white,
   headings/labels green; scanlines/glitch/glow effects).
