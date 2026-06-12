@@ -46,8 +46,8 @@ Open **`content/content.yaml`** and edit the text. It has four sections:
 - `projects` — the **Projects** section. Same shape as `publications`.
 - `experience` / `education` — the **Experience** and **Education** sections. Each entry
   has `title`, `org`, `period`, and a list of `bullets`.
-- `contact.social` — the social links, shown as icon buttons on the landing screen
-  (the icon is matched by `name`: GitHub, LinkedIn, Scholar, X, Email).
+- `contact.social` — the social links, shown as a fixed icon dock pinned to the bottom
+  of the screen (the icon is matched by `name`: GitHub, LinkedIn, Scholar, X, Email).
 
 Save the file and the dev server updates instantly. To add a PDF (e.g. a new poster),
 drop it in `public/assets/documents/` and link to it as
@@ -75,7 +75,7 @@ src/
     Landing.tsx         ← full-height landing: name (glitch) + title + typing About (personas)
     PublicationList.tsx ← reusable list, used for both Papers and Projects
     TimelineSection.tsx ← reusable list, used for both Experience and Education
-    SocialLinks.tsx     ← contact icon buttons (rendered on the landing)
+    SocialLinks.tsx     ← contact icon buttons (the fixed bottom dock)
     Footer.tsx
   lib/
     content.ts          ← reads & parses content.yaml at build time

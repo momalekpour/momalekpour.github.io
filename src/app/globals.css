@@ -109,29 +109,6 @@ body {
     text-align: left;
 }
 
-.scroll-cue {
-    position: absolute;
-    bottom: var(--space-lg);
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    color: var(--green-45);
-    text-decoration: none;
-}
-
-.scroll-cue__arrow {
-    display: block;
-    margin-top: 4px;
-    animation: bob 1.6s ease-in-out infinite;
-}
-
-@keyframes bob {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(4px); }
-}
-
 .projects {
     padding: var(--space-xl) 0;
     border-top: 1px solid var(--green-12);
@@ -147,7 +124,8 @@ body {
 .site-footer {
     max-width: var(--content-max);
     margin: 0 auto;
-    padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+    /* extra bottom space so the fixed contact dock doesn't cover the footer text */
+    padding: var(--space-xl) var(--space-lg) 6rem;
     text-align: center;
     font-size: 0.8rem;
     color: var(--green-45);
@@ -309,22 +287,35 @@ p,
     text-shadow: none;
 }
 
+/* Fixed contact dock — a floating pill of icons, always visible while scrolling. */
+.social-dock {
+    position: fixed;
+    bottom: var(--space-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 13;
+    display: flex;
+    padding: var(--space-xs);
+    background: rgba(0, 0, 0, 0.72);
+    border: 1px solid var(--green-25);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
 .social-buttons {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-lg);
+    gap: var(--space-xs);
 }
 
 .social-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--green-25);
-    border-radius: var(--radius);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     color: var(--green-60);
     transition: var(--transition);
 }
@@ -332,7 +323,6 @@ p,
 .social-button:hover {
     background-color: var(--color-green);
     color: var(--color-bg);
-    border-color: var(--color-green);
     box-shadow: 0 0 8px var(--glow-green);
 }
 

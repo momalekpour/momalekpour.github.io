@@ -30,9 +30,9 @@ Content-driven and static-first:
 - **[src/lib/content.ts](src/lib/content.ts)** reads & parses that YAML with `js-yaml` at
   **build time** (server-side `fs`), typed by [src/lib/types.ts](src/lib/types.ts).
 - **[src/app/page.tsx](src/app/page.tsx)** is a server component: it calls `getContent()`
-  and composes the sections — `<Landing>` (which renders the contact `<SocialLinks>`
-  icon buttons), two `<PublicationList>` (Papers, Projects), two `<TimelineSection>`
-  (Experience, Education).
+  and composes the sections — `<Landing>`, two `<PublicationList>` (Papers, Projects),
+  two `<TimelineSection>` (Experience, Education), plus `<SocialLinks>` rendered as a
+  fixed bottom dock (`.social-dock`).
 - **[src/app/layout.tsx](src/app/layout.tsx)** holds the `<html>` frame: SEO `metadata`,
   two JSON-LD blocks, Quicksand via `next/font`, Google Analytics via
   `@next/third-parties`, the CRT overlay divs, `<SiteNav/>`, and `<Footer/>`.
