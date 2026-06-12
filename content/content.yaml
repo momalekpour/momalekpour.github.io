@@ -1,6 +1,6 @@
 profile:
   name: "Mo Malekpour"
-  title: "AI Software Engineer and Researcher, Databases Internals Enjoyer"
+  title: "ML Software Engineer & Researcher, Databases Internals Enjoyer"
 
 aboutMe:
   texts:
@@ -8,7 +8,7 @@ aboutMe:
       I'm Mo, a MSc researcher at Data & AI Systems Lab (DAIS) in Polytechnique Montreal and Mila - Quebec AI Institute, focusing on the application of Artificial Intelligence in Data Systems. My research aims to enhance data management practices through innovative AI solutions, particularly in area of Text-to-SQL.
 
       ## Research Interests:
-      
+
           * AI-powered Software Engineering
           * Data Management
           * Text-to-SQL
@@ -55,6 +55,91 @@ aboutMe:
 
       > My current pilgrimage leads me through the hallowed data-vaults of Polytechnique Montreal and Mila, where I commune with Text-to-SQL machine spirits and architect AI constructs for the glory of the Omnissiah.
 
+publications:
+  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation"
+    venue: "ICDE 2026"
+    links:
+      - name: "Paper"
+        url: "https://amine.io/papers/2026-icde-sqlmorph.pdf"
+      - name: "Repository"
+        url: "https://github.com/dais-polymtl/sqlmorph"
+    description: "SQLMorph is a mutation-based framework for robust, reproducible Text-to-SQL evaluation. It tackles limits of public benchmarks and the cost/instability of private sets by automatically generating/expanding evaluation data via (1) Join Query Expansion (JQE), which systematically adds semantically valid joins to raise structural complexity, and (2) Textual Query Augmentation (TQA), which applies controlled natural-language perturbations to probe linguistic robustness. These create targeted “choke points”: on state-of-the-art models, JQE increases coverage and exposes accuracy decay as join count grows, while TQA surfaces brittleness. Beyond datasets, SQLMorph introduces relaxed execution-level metrics—Execution Precision (EXP), Execution Recall (EXR), and their F1—to capture partial correctness."
+
+  - title: "Towards Optimizing SQL Generation via LLM Routing"
+    venue: "NeurIPS 2024 · TRL"
+    links:
+      - name: "Paper"
+        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I93rRrYAAAAJ&citation_for_view=I93rRrYAAAAJ:W7OEmFMy1HYC"
+      - name: "Poster"
+        url: "/assets/documents/llm_routing_text_to_sql_trl_poster.pdf"
+    description: "Text-to-SQL enables users to interact with databases through natural language, simplifying access to structured data. Although highly capable large language models (LLMs) achieve strong accuracy for complex queries, they incur unnecessary latency and dollar cost for simpler ones. In this paper, we introduce the first LLM routing approach for Text-to-SQL, which dynamically selects the most cost-effective LLM capable of generating accurate SQL for each query. We present two routing strategies (score- and classification-based) that achieve accuracy comparable to the most capable LLM while reducing costs. We design the routers for ease of training and efficient inference. In our experiments, we highlight a practical and explainable accuracy-cost trade-off on the BIRD dataset."
+
+  - title: "Machine Learning Predictions for Sustainable Concrete Constructions"
+    venue: "JOBE 2024"
+    links:
+      - name: "Paper"
+        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I93rRrYAAAAJ&citation_for_view=I93rRrYAAAAJ:u5HHmVD_uO8C"
+    description: "Concrete design often overuses cement to guarantee 28-day strength, even when many structural elements, like foundations and pavements, reach full load much later. This study uses machine learning to optimize cement content for a 90-day strength target, reducing waste and emissions. Using ANN, deep learning, and regression models trained on 28- and 90-day compressive strength data, we predict optimal cement content with up to 94% accuracy. Elastic Net achieves the best results, showing potential for ~10% reductions in both cement use and carbon footprint."
+
+projects:
+  - title: "VortoSQL: Safe NL2SQL Data Agent"
+    venue: "Project"
+    links:
+      - name: "Repository"
+        url: "https://github.com/momalekpour/nl2sql-data-agent"
+    description: "A modular NL2SQL system that translates natural language questions into SQL queries, enforces row-level guardrails, executes the SQL against a SQLite database, and returns results in natural language. Built around a composable operator pipeline with five guardrail layers and a generic early-stop mechanism."
+  - title: "DailyDiet"
+    venue: "Project"
+    links:
+      - name: "Repository"
+        url: "https://github.com/DailyDiet/DailyDiet-API"
+    description: "DailyDiet is a full-stack nutrition management platform that helps users plan meals, calculate daily calorie needs, and explore recipes tailored to their goals. I was responsible for leading all backend development — building a scalable RESTful API with Flask and PostgreSQL to handle user authentication, dynamic diet generation, and recipe indexing. The backend features a dynamic-programming–based diet recommendation engine, JWT-secured user accounts, and Elasticsearch integration for semantic and ingredient-based recipe search. I also managed deployment and infrastructure setup on Heroku, and designed the data models for user tracking and admin moderation. The API powers the Vue.js + Nuxt web frontend and the companion iOS app."
+
+experience:
+  - title: "Graduate Research Assistant"
+    org: "Mila — Quebec Artificial Intelligence Institute"
+    period: "09/2023 – 12/2025"
+    bullets:
+      - "Member of Data & AI Systems lab, focused on agentic AI and data systems, specifically Text-to-SQL, and exploring DB internals."
+      - "Implemented VortoSQL (NeurIPS'24), an end-to-end Text-to-SQL system via LLM router, reducing pipeline costs by up to 40%."
+      - "Developed SQLMorph (ICDE'26), a Text-to-SQL eval framework with novel fine-grained metrics and query mutation techniques."
+  - title: "Data Engineer"
+    org: "Divar"
+    period: "02/2022 – 11/2022"
+    bullets:
+      - "Worked within the core Business Insight team for Divar's e-commerce platform with 30M+ monthly active users."
+      - "Designed and implemented a company-wide KPI system as the single source of truth, with 50+ fine/coarse-grained metrics."
+      - "Built and maintained 20+ ETL pipelines using Python, SQL, PySpark, Hadoop HDFS, Apache Airflow and Metabase."
+      - "Delivered many ad-hoc analyses to uncover inefficiencies, identify trends, and produce dashboards and predictive models."
+  - title: "Software Engineer Intern"
+    org: "Segmentino"
+    period: "06/2020 – 09/2020"
+    bullets:
+      - "Worked at Segmentino, an AI-powered marketing automation platform enabling omnichannel engagement and retention."
+      - "Developed mslib, an internal Python SDK for Node.js microservices, reducing integration time and development overhead."
+      - "Built enlib, a backend engine for the marketing journey designer, transforming user-created workflows into dynamic DAGs."
+  - title: "Software Engineer Intern"
+    org: "Institute for Research in Fundamental Sciences (IPM)"
+    period: "06/2019 – 09/2019"
+    bullets:
+      - "Improved data infrastructure for monitoring systems in Technical Development Division of the National Observatory."
+      - "Redesigned the MySQL weather monitoring database and built Flask APIs to streamline environmental data for R&D teams."
+      - "Built a web server for Robo-DIMM (night-sky telescope) using socket-based communication and modular system design."
+
+education:
+  - title: "MASc in Computer Engineering"
+    org: "Polytechnique Montreal"
+    period: "08/2023 – 12/2025"
+    bullets:
+      - "Nominated for the Best Master's Thesis Award, 2025"
+      - "Courses: Engineering AI Software Systems, Representation Learning, Advanced Concepts of Cloud Computing (GPA 4.0)"
+      - "TA: Files and Databases"
+  - title: "BSc in Computer Science, minor in Economics"
+    org: "AmirKabir University of Technology"
+    period: "09/2017 – 08/2022"
+    bullets:
+      - "TA: Fundamentals of Programming, Advanced Programming, Principle of Software Design, Data Science, ML"
+
 contact:
   social:
     - name: "GitHub"
@@ -65,39 +150,7 @@ contact:
       url: "https://scholar.google.com/citations?hl=en&user=I93rRrYAAAAJ&view_op=list_works&sortby=pubdate"
     - name: "X"
       url: "https://x.com/momalekpour"
-    # - name: "YouTube"
-    #   url: "https://www.youtube.com/@MoMalekpour"
+    - name: "YouTube"
+      url: "https://www.youtube.com/@MoMalekpour"
     - name: "Email"
       url: "mailto:momalekpour98@gmail.com"
-
-
-publications:
-  - title: "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation @ ICDE 2026"
-    links:
-      - name: "Paper"
-        url: "https://amine.io/papers/2026-icde-sqlmorph.pdf"
-      - name: "Repository"
-        url: "https://github.com/dais-polymtl/sqlmorph"
-    description: "SQLMorph is a mutation-based framework for robust, reproducible Text-to-SQL evaluation. It tackles limits of public benchmarks and the cost/instability of private sets by automatically generating/expanding evaluation data via (1) Join Query Expansion (JQE), which systematically adds semantically valid joins to raise structural complexity, and (2) Textual Query Augmentation (TQA), which applies controlled natural-language perturbations to probe linguistic robustness. These create targeted “choke points”: on state-of-the-art models, JQE increases coverage and exposes accuracy decay as join count grows, while TQA surfaces brittleness. Beyond datasets, SQLMorph introduces relaxed execution-level metrics—Execution Precision (EXP), Execution Recall (EXR), and their F1—to capture partial correctness."
-
-  - title: "Towards Optimizing SQL Generation via LLM Routing @ NeurIPS 2024 (TRL workshop)"
-    links:
-      - name: "Paper"
-        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I93rRrYAAAAJ&citation_for_view=I93rRrYAAAAJ:W7OEmFMy1HYC"
-      - name: "Repository"
-        url: "https://github.com/momalekpour/VortoSQL"
-      - name: "Poster"
-        url: "/assets/documents/llm_routing_text_to_sql_trl_poster.pdf"
-    description: "Text-to-SQL enables users to interact with databases through natural language, simplifying access to structured data. Although highly capable large language models (LLMs) achieve strong accuracy for complex queries, they incur unnecessary latency and dollar cost for simpler ones. In this paper, we introduce the first LLM routing approach for Text-to-SQL, which dynamically selects the most cost-effective LLM capable of generating accurate SQL for each query. We present two routing strategies (score- and classification-based) that achieve accuracy comparable to the most capable LLM while reducing costs. We design the routers for ease of training and efficient inference. In our experiments, we highlight a practical and explainable accuracy-cost trade-off on the BIRD dataset."
-
-  - title: "Machine Learning Predictions for ... Sustainable Concrete Constructions @ JOBE 2024"
-    links:
-      - name: "Paper"
-        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I93rRrYAAAAJ&citation_for_view=I93rRrYAAAAJ:u5HHmVD_uO8C"
-    description: "Concrete design often overuses cement to guarantee 28-day strength, even when many structural elements, like foundations and pavements, reach full load much later. This study uses machine learning to optimize cement content for a 90-day strength target, reducing waste and emissions. Using ANN, deep learning, and regression models trained on 28- and 90-day compressive strength data, we predict optimal cement content with up to 94% accuracy. Elastic Net achieves the best results, showing potential for ~10% reductions in both cement use and carbon footprint."
-
-  - title: "DailyDiet"
-    links:
-      - name: "Repository"
-        url: "https://github.com/DailyDiet/DailyDiet-API"
-    description: "DailyDiet is a full-stack nutrition management platform that helps users plan meals, calculate daily calorie needs, and explore recipes tailored to their goals. I was responsible for leading all backend development — building a scalable RESTful API with Flask and PostgreSQL to handle user authentication, dynamic diet generation, and recipe indexing. The backend features a dynamic-programming–based diet recommendation engine, JWT-secured user accounts, and Elasticsearch integration for semantic and ingredient-based recipe search. I also managed deployment and infrastructure setup on Heroku, and designed the data models for user tracking and admin moderation. The API powers the Vue.js + Nuxt web frontend and the companion iOS app."

@@ -14,11 +14,17 @@ Thumbs.db
 *.swo
 *~
 
-# Node.js dependencies (if npm/yarn added later)
+# Node.js dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
 
 # Python files (for local server)
 __pycache__/
@@ -32,8 +38,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -75,6 +79,9 @@ build/
 # Local development
 .local/
 tools/__pycache__/
+
+# Brainstorming / visual-companion artifacts
+.superpowers/
 
 # GitHub Pages specific
 _site/
