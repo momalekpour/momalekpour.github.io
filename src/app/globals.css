@@ -93,10 +93,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     position: relative;
-    padding: var(--space-xl) 0 var(--space-2xl);
+    padding: 12vh 0 var(--space-2xl);
     box-sizing: border-box;
 }
 
