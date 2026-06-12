@@ -38,13 +38,15 @@ Then open **http://localhost:3000**. The page reloads automatically as you edit 
 
 Open **`content/content.yaml`** and edit the text. It has four sections:
 
-- `profile` — your name, the hero eyebrow line, and the tagline.
-- `aboutMe.texts` — the bios for the "About Me" typing animation. There are three
-  "personas"; clicking the About Me section cycles through them. Add/remove/edit entries
-  here.
-- `contact.social` — the social links (shown in the hero and the Contact section).
-- `publications` — your papers and projects. Each has a `title`, optional `venue`, a
+- `profile` — your name and title (shown on the centered landing screen).
+- `aboutMe.texts` — the bios for the typing animation on the landing. There are three
+  "personas"; clicking the About text cycles through them. Add/remove/edit entries here.
+- `publications` — the **Papers** section. Each has a `title`, optional `venue`, a
   `description`, and optional `links` (name + url).
+- `projects` — the **Projects** section. Same shape as `publications`.
+- `experience` / `education` — the **Experience** and **Education** sections. Each entry
+  has `title`, `org`, `period`, and a list of `bullets`.
+- `contact.social` — the social links shown in the Contact section.
 
 Save the file and the dev server updates instantly. To add a PDF (e.g. a new poster),
 drop it in `public/assets/documents/` and link to it as
@@ -68,10 +70,10 @@ src/
     page.tsx            ← composes the page sections from content.yaml
     globals.css         ← all styling (CRT theme, layout, typography)
   components/
-    SiteNav.tsx         ← sticky top navigation
-    Hero.tsx            ← name, tagline, social links
-    AboutBio.tsx        ← typing animation + click-to-cycle personas + glitch effect
-    Work.tsx            ← publications / projects list
+    SiteNav.tsx         ← sticky top navigation (centered section links)
+    Landing.tsx         ← full-height landing: name (glitch) + title + typing About (personas)
+    PublicationList.tsx ← reusable list, used for both Papers and Projects
+    TimelineSection.tsx ← reusable list, used for both Experience and Education
     Contact.tsx         ← "Get in Touch" links
     Footer.tsx
   lib/
