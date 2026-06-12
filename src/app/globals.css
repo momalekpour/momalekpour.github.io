@@ -35,7 +35,7 @@
     --space-2xl: 4rem;
 
     /* Layout */
-    --content-max: 720px;
+    --content-max: 800px;
     --nav-height: 56px;
 
     /* Misc */
@@ -101,7 +101,8 @@ body {
 }
 
 .landing__inner {
-    max-width: 560px;
+    width: 100%;
+    max-width: 640px;
 }
 
 .landing .about {
