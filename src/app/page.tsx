@@ -1,7 +1,7 @@
 import { getContent } from "@/lib/content";
-import Hero from "@/components/Hero";
-import AboutBio from "@/components/AboutBio";
-import Work from "@/components/Work";
+import Landing from "@/components/Landing";
+import PublicationList from "@/components/PublicationList";
+import TimelineSection from "@/components/TimelineSection";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -9,9 +9,11 @@ export default function Home() {
 
   return (
     <main className="site-main crt">
-      <Hero profile={content.profile} social={content.contact.social} />
-      <AboutBio texts={content.aboutMe.texts} />
-      <Work publications={content.publications} />
+      <Landing profile={content.profile} texts={content.aboutMe.texts} />
+      <PublicationList heading="Papers" id="papers" items={content.publications} />
+      <PublicationList heading="Projects" id="projects" items={content.projects} />
+      <TimelineSection heading="Experience" id="experience" entries={content.experience} />
+      <TimelineSection heading="Education" id="education" entries={content.education} />
       <Contact social={content.contact.social} />
     </main>
   );
