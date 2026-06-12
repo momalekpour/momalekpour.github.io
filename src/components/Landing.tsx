@@ -33,6 +33,7 @@ export default function Landing({
     // Periodic brief glitch on the name.
     const original = profile.name;
     let glitchTimer: number | undefined;
+    let restoreTimer: number | undefined;
 
     const triggerGlitch = () => {
       if (!nameEl) return;
@@ -45,7 +46,7 @@ export default function Landing({
       }
       nameEl.textContent = glitched;
       nameEl.classList.add("glitching");
-      window.setTimeout(() => {
+      restoreTimer = window.setTimeout(() => {
         if (!nameEl) return;
         nameEl.textContent = original;
         nameEl.classList.remove("glitching");
@@ -63,6 +64,7 @@ export default function Landing({
     return () => {
       effect.destroy();
       if (glitchTimer) clearTimeout(glitchTimer);
+      if (restoreTimer) clearTimeout(restoreTimer);
       if (nameEl) {
         nameEl.textContent = original;
         nameEl.classList.remove("glitching");
