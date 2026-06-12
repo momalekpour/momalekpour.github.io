@@ -7,7 +7,6 @@ export default function SiteNav() {
         <a href="#projects">projects</a>
         <a href="#experience">experience</a>
         <a href="#education">education</a>
-        <a href="#contact">contact</a>
       </div>
     </nav>
   );

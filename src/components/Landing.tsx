@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { TypingEffect } from "@/lib/typing";
-import type { SiteContent } from "@/lib/types";
+import SocialLinks from "@/components/SocialLinks";
+import type { SiteContent, SocialLink } from "@/lib/types";
 
 const GLITCH_CHARS = [
   "@", "#", "$", "%", "&", "*", "!", "?", "<", ">", "{", "}", "[", "]", "█", "▓", "▒", "░",
@@ -11,9 +12,11 @@ const GLITCH_CHARS = [
 export default function Landing({
   profile,
   texts,
+  social,
 }: {
   profile: SiteContent["profile"];
   texts: string[];
+  social: SocialLink[];
 }) {
   const nameRef = useRef<HTMLHeadingElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -80,6 +83,7 @@ export default function Landing({
           {profile.name}
         </h1>
         <p className="hero__title">{profile.title}</p>
+        <SocialLinks links={social} />
         <div className="about" ref={aboutRef} title="click to cycle personas">
           <div id="typed-text" ref={typedRef}></div>
         </div>
