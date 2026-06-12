@@ -511,10 +511,6 @@ p,
         padding: 0 var(--space-md);
     }
 
-    .site-nav {
-        padding: 0 var(--space-md);
-    }
-
     .projects,
     .contact-section {
         padding: var(--space-lg) 0;
@@ -532,7 +528,15 @@ p,
         gap: 0.2rem;
     }
 
+    .site-nav {
+        padding: 0 var(--space-sm);
+    }
+
     .site-nav__links {
-        gap: var(--space-md);
+        gap: var(--space-xs);
+    }
+
+    .site-nav__links a {
+        font-size: 0.75rem;
     }
 }
