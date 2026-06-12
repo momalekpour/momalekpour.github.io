@@ -41,13 +41,13 @@ Open **`content/content.yaml`** and edit the text. It has four sections:
 - `profile` — your name and title (shown on the centered landing screen).
 - `aboutMe.texts` — the bios for the typing animation on the landing. There are three
   "personas"; clicking the About text cycles through them. Add/remove/edit entries here.
-- `publications` — the **Papers** section. Each has a `title`, optional `venue`, a
-  `description`, and optional `links` (name + url).
-- `projects` — the **Projects** section. Same shape as `publications`.
-- `experience` / `education` — the **Experience** and **Education** sections. Each entry
-  has `title`, `org`, `period`, and a list of `bullets`.
-- `contact.social` — the social links, shown as a fixed icon dock pinned to the bottom
-  of the screen (the icon is matched by `name`: GitHub, LinkedIn, Scholar, X, Email).
+- `education` / `experience` — the **Education** and **Experience** sections (rendered in
+  that order). Each entry has `title`, `org`, `period`, and a list of `bullets`.
+- `publications` and `projects` — rendered together as one **Publications & Projects**
+  section (publications first). Each has a `title`, optional `venue`, a `description`, and
+  optional `links` (name + url).
+- `contact.social` — the social links, shown as a fixed icon dock pinned to the bottom of
+  the screen (the icon is matched by `name`: GitHub, LinkedIn, Scholar, X, YouTube, Email).
 
 Save the file and the dev server updates instantly. To add a PDF (e.g. a new poster),
 drop it in `public/assets/documents/` and link to it as

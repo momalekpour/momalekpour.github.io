@@ -11,10 +11,13 @@ export default function Home() {
     <>
       <main className="site-main crt">
         <Landing profile={content.profile} texts={content.aboutMe.texts} />
-        <PublicationList heading="Papers" id="papers" items={content.publications} />
-        <PublicationList heading="Projects" id="projects" items={content.projects} />
-        <TimelineSection heading="Experience" id="experience" entries={content.experience} />
         <TimelineSection heading="Education" id="education" entries={content.education} />
+        <TimelineSection heading="Experience" id="experience" entries={content.experience} />
+        <PublicationList
+          heading="Publications & Projects"
+          id="publications"
+          items={[...content.publications, ...content.projects]}
+        />
       </main>
       <div className="social-dock">
         <SocialLinks links={content.contact.social} />

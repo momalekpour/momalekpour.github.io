@@ -15,12 +15,11 @@ export default function TimelineSection({
       <div className="timeline-list">
         {entries.map((e, i) => (
           <article className="timeline-item" key={i}>
-            <div className="timeline-item__head">
-              <h3 className="timeline-item__title">
-                {e.title} <span className="timeline-item__org">@ {e.org}</span>
-              </h3>
-              <span className="timeline-item__period">{e.period}</span>
-            </div>
+            <h3 className="timeline-item__title">{e.title}</h3>
+            <p className="timeline-item__meta">
+              <span className="timeline-item__org">{e.org}</span>
+              <span className="timeline-item__period"> · {e.period}</span>
+            </p>
             <ul className="timeline-item__bullets">
               {e.bullets.map((b, j) => (
                 <li key={j}>{b}</li>
