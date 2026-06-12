@@ -1,0 +1,29 @@
+import type { Publication } from "@/lib/types";
+
+export default function Work({ publications }: { publications: Publication[] }) {
+  return (
+    <section className="projects" id="work">
+      <h2 className="section-label">Selected Work</h2>
+      <div className="project-grid">
+        {publications.map((pub, i) => (
+          <article className="project-item" key={i}>
+            <div className="project-item__head">
+              <h3 className="project-item__title">{pub.title}</h3>
+              {pub.venue && <span className="project-item__venue">{pub.venue}</span>}
+            </div>
+            <p className="project-description">{pub.description}</p>
+            {pub.links && (
+              <div className="project-links">
+                {pub.links.map((link) => (
+                  <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
