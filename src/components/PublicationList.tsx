@@ -1,3 +1,4 @@
+import GlitchText from "@/components/GlitchText";
 import type { Publication } from "@/lib/types";
 
 export default function PublicationList({
@@ -11,7 +12,7 @@ export default function PublicationList({
 }) {
   return (
     <section className="projects" id={id}>
-      <h2 className="section-label">{heading}</h2>
+      <GlitchText as="h2" className="section-label" text={heading} />
       <div className="project-grid">
         {items.map((pub, i) => (
           <article className="project-item" key={pub.title}>
