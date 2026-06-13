@@ -8,7 +8,6 @@ aboutMe:
       I'm Mo, a MSc researcher at Data & AI Systems Lab (DAIS) in Polytechnique Montreal and Mila - Quebec AI Institute, focusing on the application of Artificial Intelligence in Data Systems. My research aims to enhance data management practices through innovative AI solutions, particularly in area of Text-to-SQL.
 
       ## Research Interests:
-
           * AI-powered Software Engineering
           * Data Management
           * Text-to-SQL
@@ -19,20 +18,17 @@ aboutMe:
       سلام! i'm Mo, currently doing my MSc at Polytechnique Montreal and Mila!
 
       ## the main quest:
-
         * making AI models actually useful for software/data engineering
         * hanging out with ma Claudes
         * learning systems programming and DBs internals for fun/pain
 
       ## stack:
-
         * backend development enthusiast \( ﾟヮﾟ)/
         * data systems enjoyer ( ´∀`)v
         * c++ sufferer (¬_¬")
         * rust evangelist? (¯\_(ツ)_/¯)
 
       ## speedrun:
-
       started as a computer science student at AmirKabir University, software engineer intern at IPM and then Segmentino, built data pipelines and dashboards at Divar, did some text-to-sql at PolyMTL, and now wrestling with my Master's thesis.
 
       if i'm not dropping PRs or putting a curse on reviewer 2, i'm yelling at Anthropic for their rate limits.
