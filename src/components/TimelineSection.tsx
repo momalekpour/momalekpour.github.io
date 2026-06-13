@@ -14,8 +14,8 @@ export default function TimelineSection({
     <section className="timeline-section" id={id}>
       <GlitchText as="h2" className="section-label" text={heading} />
       <div className="timeline-list">
-        {entries.map((e, i) => (
-          <article className="timeline-item" key={`${e.title}-${e.org}`}>
+        {entries.map((e) => (
+          <article className="timeline-item" key={`${e.title}-${e.org}`} data-reveal>
             <h3 className="timeline-item__title">{e.title}</h3>
             <p className="timeline-item__meta">
               <span className="timeline-item__org">{e.org}</span>

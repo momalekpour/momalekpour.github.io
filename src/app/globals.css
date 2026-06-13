@@ -47,6 +47,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -55,8 +56,6 @@ body {
     padding: 0;
     font-family: var(--font-mono);
     color: var(--color-text);
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 /* Anchor scroll offset so sections clear the sticky nav */
@@ -98,6 +97,8 @@ body {
     position: relative;
     padding: 7vh 0 var(--space-2xl);
     box-sizing: border-box;
+    transform: translateY(var(--parallax-y, 0px));
+    opacity: var(--parallax-opacity, 1);
 }
 
 .landing__inner {
@@ -141,7 +142,6 @@ body {
 
 .projects {
     padding: var(--space-xl) 0;
-    border-top: 1px solid var(--green-12);
     position: relative;
 }
 
@@ -200,11 +200,19 @@ p,
 }
 
 .section-label {
-    font-size: 1.45rem;
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    font-weight: 700;
     letter-spacing: 1.5px;
+    line-height: 1.1;
     text-transform: uppercase;
     color: var(--color-green);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--green-25);
+    text-shadow:
+        0 0 18px var(--glow-green),
+        -1px 0 1px var(--glow-green),
+        1px 0 1px var(--glow-green);
 }
 
 .project-item__title {
@@ -390,6 +398,17 @@ p,
     }
 }
 
+/* ---------- scroll reveal ---------- */
+
+[data-reveal] {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+}
+
 /* ---------- typing animation ---------- */
 
 @keyframes blink {
@@ -473,7 +492,6 @@ p,
 
 .timeline-section {
     padding: var(--space-xl) 0;
-    border-top: 1px solid var(--green-12);
     position: relative;
 }
 
@@ -559,7 +577,16 @@ p,
         height: 84px;
     }
 
-    .section-label {
-        font-size: 1.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+        opacity: 1;
+        transition: none;
+    }
+
+    .landing {
+        transform: none !important;
+        opacity: 1 !important;
     }
 }

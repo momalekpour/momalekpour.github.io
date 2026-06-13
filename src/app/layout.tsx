@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import ScrollEffects from "@/components/ScrollEffects";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -132,6 +133,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="scanlines"></div>
         <div className="crt-overlay"></div>
         <SiteNav />
+        <ScrollEffects />
         {children}
         <Footer />
         <GoogleAnalytics gaId="G-ZBC862D3S5" />
