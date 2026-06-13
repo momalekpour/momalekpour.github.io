@@ -18,7 +18,9 @@ export default function ScrollEffects() {
           }
         }
       },
-      { threshold: 0.12 },
+      // Fire once the element's top clears the lower ~18% of the viewport,
+      // so the reveal animates while it's clearly on screen.
+      { threshold: 0, rootMargin: "0px 0px -18% 0px" },
     );
 
     revealEls.forEach((el) => revealObserver.observe(el));
@@ -33,10 +35,10 @@ export default function ScrollEffects() {
         rafId = null;
         if (!landing) return;
         const y = window.scrollY;
-        landing.style.setProperty("--parallax-y", `${y * -0.12}px`);
+        landing.style.setProperty("--parallax-y", `${y * -0.28}px`);
         landing.style.setProperty(
           "--parallax-opacity",
-          String(Math.max(0, 1 - y / 500)),
+          String(Math.max(0, 1 - y / 380)),
         );
       });
     }
