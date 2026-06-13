@@ -143,7 +143,6 @@ body {
 
 .projects {
     padding: var(--space-xl) 0;
-    border-top: 1px solid var(--green-12);
     position: relative;
 }
 
@@ -202,9 +201,9 @@ p,
 }
 
 .section-label {
-    font-size: clamp(2.4rem, 8vw, 4rem);
+    font-size: clamp(1.9rem, 5.5vw, 3rem);
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     line-height: 1.05;
     text-transform: uppercase;
     color: var(--color-green);
@@ -519,7 +518,6 @@ p,
 
 .timeline-section {
     padding: var(--space-xl) 0;
-    border-top: 1px solid var(--green-12);
     position: relative;
 }
 
@@ -606,7 +604,7 @@ p,
     }
 
     .section-label {
-        font-size: clamp(1.9rem, 10vw, 2.6rem);
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
         margin-left: calc(-1 * var(--space-md));
         margin-right: calc(-1 * var(--space-md));
         padding-left: var(--space-md);

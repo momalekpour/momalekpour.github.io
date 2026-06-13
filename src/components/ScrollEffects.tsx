@@ -35,10 +35,10 @@ export default function ScrollEffects() {
         rafId = null;
         if (!landing) return;
         const y = window.scrollY;
-        landing.style.setProperty("--parallax-y", `${y * -0.28}px`);
+        landing.style.setProperty("--parallax-y", `${y * -0.18}px`);
         landing.style.setProperty(
           "--parallax-opacity",
-          String(Math.max(0, 1 - y / 380)),
+          String(Math.max(0, 1 - y / 620)),
         );
       });
     }
