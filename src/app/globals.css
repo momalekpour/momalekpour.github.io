@@ -207,6 +207,8 @@ p,
     text-transform: uppercase;
     color: var(--color-green);
     margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--green-25);
     text-shadow:
         0 0 18px var(--glow-green),
         -1px 0 1px var(--glow-green),
