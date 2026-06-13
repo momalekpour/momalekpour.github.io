@@ -110,6 +110,35 @@ body {
     text-align: left;
 }
 
+/* Hero header: circular avatar to the left, name + title stacked to the right. */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    text-align: left;
+    margin-bottom: var(--space-lg);
+}
+
+.hero__intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__avatar {
+    flex-shrink: 0;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--green-45);
+    box-shadow: 0 0 12px var(--glow-green);
+    transition: filter 0.4s ease;
+}
+
+.hero__avatar:hover {
+    filter: grayscale(1) brightness(0.9) sepia(1) hue-rotate(60deg) saturate(4);
+}
+
 .projects {
     padding: var(--space-xl) 0;
     border-top: 1px solid var(--green-12);
@@ -166,15 +195,16 @@ p,
 .hero__title {
     font-size: 0.95rem;
     color: var(--green-60);
-    margin: 0 0 var(--space-lg);
+    margin: 0;
     text-shadow: none;
 }
 
 .section-label {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
+    font-size: 1.45rem;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--green-45);
+    color: var(--color-green);
+    margin-bottom: var(--space-xs);
 }
 
 .project-item__title {
@@ -333,7 +363,7 @@ p,
     display: block;
 }
 
-.hero__name.glitching {
+.glitching {
     animation: textGlitch 0.1s ease-in-out;
 }
 
@@ -511,5 +541,25 @@ p,
 
     .site-nav__links a {
         font-size: 0.75rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-sm);
+    }
+
+    .hero__intro {
+        align-items: center;
+    }
+
+    .hero__avatar {
+        width: 84px;
+        height: 84px;
+    }
+
+    .section-label {
+        font-size: 1.25rem;
     }
 }

@@ -1,3 +1,4 @@
+import GlitchText from "@/components/GlitchText";
 import type { TimelineEntry } from "@/lib/types";
 
 export default function TimelineSection({
@@ -11,7 +12,7 @@ export default function TimelineSection({
 }) {
   return (
     <section className="timeline-section" id={id}>
-      <h2 className="section-label">{heading}</h2>
+      <GlitchText as="h2" className="section-label" text={heading} />
       <div className="timeline-list">
         {entries.map((e, i) => (
           <article className="timeline-item" key={`${e.title}-${e.org}`}>

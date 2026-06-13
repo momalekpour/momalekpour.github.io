@@ -2,11 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { TypingEffect } from "@/lib/typing";
+import GlitchText from "@/components/GlitchText";
 import type { SiteContent } from "@/lib/types";
-
-const GLITCH_CHARS = [
-  "@", "#", "$", "%", "&", "*", "!", "?", "<", ">", "{", "}", "[", "]", "█", "▓", "▒", "░",
-];
 
 export default function Landing({
   profile,
@@ -15,14 +12,12 @@ export default function Landing({
   profile: SiteContent["profile"];
   texts: string[];
 }) {
-  const nameRef = useRef<HTMLHeadingElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const typedRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const typedEl = typedRef.current;
     const aboutEl = aboutRef.current;
-    const nameEl = nameRef.current;
     if (!typedEl || !aboutEl) return;
 
     // Typing animation + click-to-cycle personas (click anywhere on the about block).
@@ -30,56 +25,29 @@ export default function Landing({
     effect.type();
     effect.enableClickToChange(aboutEl);
 
-    // Periodic brief glitch on the name.
-    const original = profile.name;
-    let glitchTimer: number | undefined;
-    let restoreTimer: number | undefined;
-
-    const triggerGlitch = () => {
-      if (!nameEl) return;
-      let glitched = original;
-      const num = Math.random() < 0.5 ? 2 : 5;
-      for (let i = 0; i < num; i++) {
-        const idx = Math.floor(Math.random() * original.length);
-        const ch = GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)];
-        glitched = glitched.substring(0, idx) + ch + glitched.substring(idx + 1);
-      }
-      nameEl.textContent = glitched;
-      nameEl.classList.add("glitching");
-      restoreTimer = window.setTimeout(() => {
-        if (!nameEl) return;
-        nameEl.textContent = original;
-        nameEl.classList.remove("glitching");
-      }, 100);
-    };
-
-    const scheduleNext = () => {
-      glitchTimer = window.setTimeout(() => {
-        triggerGlitch();
-        scheduleNext();
-      }, 1000 + Math.random() * 2000);
-    };
-    scheduleNext();
-
     return () => {
       effect.destroy();
-      if (glitchTimer) clearTimeout(glitchTimer);
-      if (restoreTimer) clearTimeout(restoreTimer);
-      if (nameEl) {
-        nameEl.textContent = original;
-        nameEl.classList.remove("glitching");
-      }
       typedEl.innerHTML = "";
     };
-  }, [texts, profile.name]);
+  }, [texts]);
 
   return (
     <section className="landing" id="top">
       <div className="landing__inner">
-        <h1 className="hero__name" ref={nameRef}>
-          {profile.name}
-        </h1>
-        <p className="hero__title">{profile.title}</p>
+        <header className="hero">
+          {/* eslint-disable-next-line @next/next/no-img-element -- static export uses unoptimized images */}
+          <img
+            className="hero__avatar"
+            src="/assets/avatar.jpeg"
+            alt={profile.name}
+            width={886}
+            height={886}
+          />
+          <div className="hero__intro">
+            <GlitchText as="h1" className="hero__name" text={profile.name} />
+            <p className="hero__title">{profile.title}</p>
+          </div>
+        </header>
         <div className="about" ref={aboutRef} title="click to cycle personas">
           <div id="typed-text" ref={typedRef}></div>
         </div>
