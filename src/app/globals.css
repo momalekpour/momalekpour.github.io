@@ -56,7 +56,6 @@ body {
     padding: 0;
     font-family: var(--font-mono);
     color: var(--color-text);
-    overflow-y: auto;
 }
 
 /* Anchor scroll offset so sections clear the sticky nav */
