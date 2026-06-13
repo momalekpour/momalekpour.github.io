@@ -12,13 +12,13 @@ export interface TypingConfig {
 }
 
 export const TYPING_CONFIG: TypingConfig = {
-  baseSpeed: 45,
+  baseSpeed: 30,
   speedVariation: 0.7,
   autoCompleteChance: 0.08,
-  autoCompleteDelay: 150,
+  autoCompleteDelay: 120,
   mistakeChance: 0.03,
   backspaceDelay: 200,
-  punctuationDelay: 300,
+  punctuationDelay: 220,
   commonMistakes: {
     a: ["aq", "qa"],
     e: ["ew", "re"],
